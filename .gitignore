@@ -57,4 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+<<<<<<< HEAD
 img/
+=======
+>>>>>>> 5b5c532fcde3eba2fad5bdd9c3e7f7fb98a15a0e
