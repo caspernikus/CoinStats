@@ -16,6 +16,9 @@ CoinStats is written in JavaScript and uses NodeJS for running. Also does CoinSt
 - V.0.2:
   - Create directly Steemit Post
   - Better Charts
+- V.0.3:
+  - Bar Charts shows only percentage change over last week
+  - Toggle Steemit auto posting via config
 - V.1.0:
   - More information (e.g different Charts for each Coin)
   - Running on a Server and automatically post every day
