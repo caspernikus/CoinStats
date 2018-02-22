@@ -1,6 +1,10 @@
 const ChartjsNode = require('chartjs-node');
 var request = require('request');
 var fs = require('fs');
+var steem = require('steem');
+
+var config = JSON.parse(fs.readFileSync("config.json"));
+steem.api.setOptions({ url: config.steem_api });
 
 if (global.CanvasGradient === undefined) {
   global.CanvasGradient = function() {};
@@ -111,7 +115,7 @@ function init() {
                                 image: imgURL + '.png'
                             };
 
-                            generateMarkdown(coindata);
+                            generateMarkdown(coindata, timestamp);
                         });
                     }
                 });
@@ -130,7 +134,7 @@ function getLabels(amount) {
     return labels;
 }
 
-function generateMarkdown(coindata) {
+function generateMarkdown(coindata, timestamp) {
     fs.readFile('templates/main.md', 'utf8', function (err, data) {
       if (err) throw err;
 
@@ -139,10 +143,18 @@ function generateMarkdown(coindata) {
       data = data.replace(/{date}/g, new Date().toDateString());
 
       getAllCoins(coindata, function(coins) {
-          data = data.replace(/{coins}/g, coins);
+          data = data.replace(/{coins}/g, coins.markdown);
 
           // Write Markdown File
-          writeMarkdownFile(data);
+          writeMarkdownFile(data, timestamp);
+
+          const broadcastData = {
+              markdown: data,
+              links: coins.links,
+              images: [coindata['overall'].image].concat(coins.images)
+          };
+
+          broadcastToSteemBlockchain(broadcastData, timestamp);
       });
     });
 }
@@ -155,17 +167,56 @@ function writeMarkdownFile(data) {
     });
 }
 
+function broadcastToSteemBlockchain(data, timestamp) {
+
+    const json_metadata = {
+        "tags": [
+            "coin",
+            "cryptocurrency",
+            "bitcoin",
+            "steem",
+            "crypto"
+        ],
+        "links": data.links,
+        "image": data.images,
+        "format": "markdown",
+        "app": "coinstats\/0.2"
+    };
+
+    steem.broadcast.comment(
+        config.private_posting_key,
+        '',
+        'coin',
+        config.account,
+        timestamp + '-coinstats-daily-cryptocurrency-statistic-service',
+        'CoinStats - Daily Cryptocurrency Statistic Service',
+        data.markdown,
+        json_metadata
+    );
+}
+
 function getAllCoins(coindata, callback) {
     var coinFields = '';
     var indexGenerated = 0;
 
+    var returnData = {
+        links: [],
+        images: [],
+        markdown: ''
+    };
+
     coins.forEach((coin) => {
-        generateCoinmarkdown(coindata[coin], function(markdown) {
-            coinFields += markdown + '  ';
+        generateCoinmarkdown(coindata[coin], function(data) {
+            coinFields += data.markdown + '  ';
+
+            returnData.links.push(data.link);
+            returnData.images.push(coindata[coin].image);
 
             indexGenerated++;
             if (indexGenerated === coins.length) {
-                callback(coinFields);
+                returnData.markdown = coinFields;
+
+                callback(returnData);
             }
         });
     });
@@ -187,7 +238,12 @@ function generateCoinmarkdown(coindata, callback) {
       data = data.replace(/{change_7d}/g, coindata.data.percent_change_7d);
       data = data.replace(/{more}/g, '[Click here](https://coinmarketcap.com/currencies/'+ coindata.data.id +')');
 
-      callback(data);
+      returnData = {
+          markdown: data,
+          link: 'https://coinmarketcap.com/currencies/'+ coindata.data.id
+      };
+
+      callback(returnData);
     });
 }
 
@@ -226,7 +282,7 @@ function uploadImageToBlockchain(imageName, callback) {
         request.post({url: 'https://spee.ch/api/claim-publish', formData: {name: imageName, file: fs.createReadStream('./img/'+ imageName +'.png')}}, function (error, response, body) {
             callback(error, body);
         });
-    }, 60000);
+    }, 90000);
 }
 
 function createChartImage(imageName, chartDataSet, chartType, chartSize, callback) {
@@ -243,6 +299,11 @@ function createChartImage(imageName, chartDataSet, chartType, chartSize, callbac
                         callback: function(value, index, values) {
                             return value.toLocaleString("en-US",{style:"currency", currency:"USD"});;
                         }
+                    }
+                }],
+                xAxes: [{
+                    gridLines: {
+                        display:false
                     }
                 }]
             }
