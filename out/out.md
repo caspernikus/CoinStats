@@ -1,70 +1,70 @@
 # CoinStats - Daily Cryptocurrency Statistic Service
 
-![overall_graph](https://spee.ch/23dedbf5ddd32df822e1a2aa725aa6cae881f753/overall1519286409375.png)
+![overall_graph](https://spee.ch/0f80dd59c33e053d07f37c8ed4119308207dcf25/overall1519647126528.png)
 
-*I am happily presenting you the daily Cryptocurrency statistics for Thu Feb 22 2018*
+*I am happily presenting you the daily Cryptocurrency statistics for Mon Feb 26 2018*
 
-## Bitcoin
+## Ethereum
 
-![coin_graph](https://spee.ch/6dd8818816463cd3d3949654e012c6391a80681d/bitcoin1519286409375.png)
-
-Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
---- | --- | --- | --- | --- | --- | --- | ---
-Bitcoin | BTC | 1 | 10759.0 | -2.32 | -4.02 | 10.47 | [Click here](https://coinmarketcap.com/currencies/bitcoin)
-
----
-  ## Ethereum
-
-![coin_graph](https://spee.ch/0e47b40e1d534c0fec51a2dac3b3ee22c7a82ba2/ethereum1519286409385.png)
+![coin_graph](https://spee.ch/92b977859dae6f5ab2670a571319192b8fec9fbe/ethereum1519647124297.png)
 
 Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
 --- | --- | --- | --- | --- | --- | --- | ---
-Ethereum | ETH | 2 | 855.129 | -2.07 | -4.55 | -8.34 | [Click here](https://coinmarketcap.com/currencies/ethereum)
+Ethereum | ETH | 2 | 864.417 | 0.05 | 2.84 | -8.79 | [Click here](https://coinmarketcap.com/currencies/ethereum)
 
 ---
   ## Ripple
 
-![coin_graph](https://spee.ch/174024f7f8c85d21fa8c0f5148dcff2496c71965/ripple1519286407979.png)
+![coin_graph](https://spee.ch/5419b3cf43244ee21eb51a41919674eae40fc730/ripple1519647124307.png)
 
 Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
 --- | --- | --- | --- | --- | --- | --- | ---
-Ripple | XRP | 3 | 1.0085 | -2.54 | -5.27 | -11.55 | [Click here](https://coinmarketcap.com/currencies/ripple)
+Ripple | XRP | 3 | 0.934378 | 0.17 | -1.28 | -18.6 | [Click here](https://coinmarketcap.com/currencies/ripple)
+
+---
+  ## Bitcoin
+
+![coin_graph](https://spee.ch/f1796a0ecdaa65dae5c6f867c3fa556f72f841b0/bitcoin1519647126509.png)
+
+Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
+--- | --- | --- | --- | --- | --- | --- | ---
+Bitcoin | BTC | 1 | 9797.32 | 0.26 | 0.77 | -10.76 | [Click here](https://coinmarketcap.com/currencies/bitcoin)
 
 ---
   ## Litecoin
 
-![coin_graph](https://spee.ch/e4d822d7631932e26674fa38af38ea8dda996445/litecoin1519286409398.png)
+![coin_graph](https://spee.ch/ee362ed8f8ec7b8b2c6eac06a36daa50b5183d26/litecoin1519647126528.png)
 
 Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
 --- | --- | --- | --- | --- | --- | --- | ---
-Litecoin | LTC | 5 | 214.813 | -2.5 | -4.99 | -6.66 | [Click here](https://coinmarketcap.com/currencies/litecoin)
+Litecoin | LTC | 5 | 227.476 | -0.67 | 6.57 | 1.75 | [Click here](https://coinmarketcap.com/currencies/litecoin)
 
 ---
   ## Cardano
 
-![coin_graph](https://spee.ch/c6aa0574d26cae01fe45627224a1a2d7eae87806/cardano1519286409379.png)
+![coin_graph](https://spee.ch/496ef5a4e05fb4310803e5c34ebb8ac113289a20/cardano1519647126523.png)
 
 Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
 --- | --- | --- | --- | --- | --- | --- | ---
-Cardano | ADA | 6 | 0.358771 | -1.16 | -2.84 | -11.18 | [Click here](https://coinmarketcap.com/currencies/cardano)
+Cardano | ADA | 6 | 0.325356 | -0.5 | -0.32 | -16.92 | [Click here](https://coinmarketcap.com/currencies/cardano)
 
 ---
   ## NEO
 
-![coin_graph](https://spee.ch/3dfd3e68b099dbcdea079b9401bd30491c1b6901/neo1519286409407.png)
+![coin_graph](https://spee.ch/3197a3927be2e9884153de886f41cfc7e4fbccaf/neo1519647126515.png)
 
 Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
 --- | --- | --- | --- | --- | --- | --- | ---
-NEO | NEO | 7 | 122.624 | -2.94 | -3.85 | -0.47 | [Click here](https://coinmarketcap.com/currencies/neo)
+NEO | NEO | 7 | 127.161 | 4.21 | 7.6 | -5.71 | [Click here](https://coinmarketcap.com/currencies/neo)
 
 ---
   ## Steem
 
-![coin_graph](https://spee.ch/d9897ef09b795df7014c003779a5e3e1af6ef133/steem1519286409391.png)
+![coin_graph](https://spee.ch/1dafd2872b734f220b251f367a7a34aa081b9963/steem1519647126538.png)
 
 Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
 --- | --- | --- | --- | --- | --- | --- | ---
-Steem | STEEM | 28 | 3.72215 | -2.19 | -6.42 | -16.48 | [Click here](https://coinmarketcap.com/currencies/steem)
+Steem | STEEM | 26 | 3.44338 | 0.38 | -1.03 | -20.91 | [Click here](https://coinmarketcap.com/currencies/steem)
 
 ---
   

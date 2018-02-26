@@ -17,7 +17,8 @@ const coins = [
     'litecoin',
     'cardano',
     'neo',
-    'steem'
+    'eos',
+    'steem',
 ]
 
 const symbols = {
@@ -28,6 +29,7 @@ const symbols = {
     ripple: 'XRP',
     cardano: 'ADA',
     neo: 'NEO',
+    eos: 'EOS',
 }
 
 const backgroundMapping = {
@@ -37,7 +39,8 @@ const backgroundMapping = {
     steem: 'rgba(255, 206, 86, 0.2)',
     ripple: 'rgba(75, 192, 192, 0.2)',
     cardano: 'rgba(153, 102, 255, 0.2)',
-    neo: 'rgba(255, 159, 64, 0.2)'
+    neo: 'rgba(255, 159, 64, 0.2)',
+    eos: 'rgba(34, 47, 62, 0.2)'
 }
 
 const borderMapping = {
@@ -47,13 +50,15 @@ const borderMapping = {
     steem: 'rgba(255, 206, 86, 1)',
     ripple: 'rgba(75, 192, 192, 1)',
     cardano: 'rgba(153, 102, 255, 1)',
-    neo: 'rgba(255, 159, 64, 1)'
+    neo: 'rgba(255, 159, 64, 1)',
+    eos: 'rgba(34, 47, 62, 1)'
 }
 
 init();
 
 function init() {
     var coindata = {};
+    var imageNames = {};
 
     var indexUploaded = 0;
     coins.forEach((coin) => {
@@ -81,14 +86,8 @@ function init() {
                 createChartImage(coin + timestamp, {
                     labels: getLabels(1440),
                     datasets: [graphdata]
-                }, 'line', {width: 1280, height: 800}, function(err, res) {
-                    if (err !== null || res === undefined) {
-                        console.log('Error: ' + err);
-                        return;
-                    }
-
-                    const imgURL = JSON.parse(res).message.url;
-                    coindata[coin].image = imgURL + '.png';
+                }, 'line', {width: 1280, height: 800}, function() {
+                    imageNames[coin] = coin + timestamp;
 
                     indexUploaded++;
                     if (indexUploaded === coins.length) {
@@ -104,18 +103,20 @@ function init() {
                         });
                         createChartImage('overall' + timestamp, {
                             datasets: dataset
-                        }, 'bar', {width: 1280, height: 800}, function(err, res) {
-                            if (err !== null) {
-                                console.log(err);
-                                return;
-                            }
+                        }, 'bar', {width: 1280, height: 800}, function() {
+                            uploadImageToBlockchain('overall' + timestamp, function(err, res) {
+                                if (err) {
+                                    console.log(err);
+                                    return;
+                                }
 
-                            const imgURL = JSON.parse(res).message.url;
-                            coindata['overall'] = {
-                                image: imgURL + '.png'
-                            };
+                                const imgURL = JSON.parse(res).message.url;
+                                coindata['overall'] = {
+                                    image: imgURL + '.png'
+                                };
 
-                            generateMarkdown(coindata, timestamp);
+                                generateMarkdown(coindata, timestamp, imageNames);
+                            });
                         });
                     }
                 });
@@ -134,28 +135,49 @@ function getLabels(amount) {
     return labels;
 }
 
-function generateMarkdown(coindata, timestamp) {
-    fs.readFile('templates/main.md', 'utf8', function (err, data) {
-      if (err) throw err;
+function uploadImages(coindata, imageNames, index, callback) {
+    if (coins.length <= index) {
+        callback(coindata);
+        return;
+    }
 
-      data = data.replace(/{header}/g, 'CoinStats - Daily Cryptocurrency Statistic Service');
-      data = data.replace(/{overall_graph}/g, '![overall_graph]('+ coindata['overall'].image +')');
-      data = data.replace(/{date}/g, new Date().toDateString());
+    const coin = coins[index];
+    const imageName = imageNames[coin];
+    uploadImageToBlockchain(imageName, function(err, res) {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        const imgURL = JSON.parse(res).message.url;
+        coindata[coin].image = imgURL + '.png';
+        uploadImages(coindata, imageNames, index + 1, callback);
+    });
+}
 
-      getAllCoins(coindata, function(coins) {
-          data = data.replace(/{coins}/g, coins.markdown);
+function generateMarkdown(coinData, timestamp, imageNames) {
+    uploadImages(coinData, imageNames, 0, function(coindata) {
+        fs.readFile('templates/main.md', 'utf8', function (err, data) {
+          if (err) throw err;
 
-          // Write Markdown File
-          writeMarkdownFile(data, timestamp);
+          data = data.replace(/{header}/g, 'CoinStats - Daily Cryptocurrency Statistic Service');
+          data = data.replace(/{overall_graph}/g, '![overall_graph]('+ coindata['overall'].image +')');
+          data = data.replace(/{date}/g, new Date().toDateString());
 
-          const broadcastData = {
-              markdown: data,
-              links: coins.links,
-              images: [coindata['overall'].image].concat(coins.images)
-          };
+          getAllCoins(coindata, function(coins) {
+              data = data.replace(/{coins}/g, coins.markdown);
 
-          broadcastToSteemBlockchain(broadcastData, timestamp);
-      });
+              // Write Markdown File
+              writeMarkdownFile(data, timestamp);
+
+              const broadcastData = {
+                  markdown: data,
+                  links: coins.links,
+                  images: [coindata['overall'].image].concat(coins.images)
+              };
+
+              broadcastToSteemBlockchain(broadcastData, timestamp);
+          });
+        });
     });
 }
 
@@ -278,11 +300,9 @@ function getHistoricalData(symbol, callback) {
 }
 
 function uploadImageToBlockchain(imageName, callback) {
-    setTimeout(function() {
-        request.post({url: 'https://spee.ch/api/claim-publish', formData: {name: imageName, file: fs.createReadStream('./img/'+ imageName +'.png')}}, function (error, response, body) {
-            callback(error, body);
-        });
-    }, 90000);
+    request.post({url: 'https://spee.ch/api/claim-publish', formData: {name: imageName, file: fs.createReadStream('./img/'+ imageName +'.png')}}, function (error, response, body) {
+        callback(error, body);
+    });
 }
 
 function createChartImage(imageName, chartDataSet, chartType, chartSize, callback) {
@@ -329,9 +349,6 @@ function createChartImage(imageName, chartDataSet, chartType, chartSize, callbac
     .then(() => {
         chartNode.destroy();
 
-        // UPLOAD IMAGE TO Spee.ch --> Spee.ch not working
-        uploadImageToBlockchain(imageName, function(err, res) {
-            callback(err, res);
-        });
+        callback();
     });
 }
