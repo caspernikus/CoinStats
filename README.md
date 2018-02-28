@@ -1,6 +1,6 @@
 # CoinStats
 
-![wallpaper.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1519826924/fhzkk48ggdqnsfzkuvts.png
+![wallpaper.png](https://res.cloudinary.com/hpiynhbhq/image/upload/v1519826924/fhzkk48ggdqnsfzkuvts.png)
 
 #### What is the project about?
 CoinStats is a NodeJS Cryptocurrency Statistic Bot for Steemit or other Platforms. CoinStats retrieves the last 24 historical data for specified coins and generates line chart images from it. These images are uploaded directly to the LBRY Blockchain and a Markdown File is generated.
