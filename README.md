@@ -6,7 +6,9 @@
 CoinStats is a NodeJS Cryptocurrency Statistic Bot for Steemit or other Platforms. CoinStats retrieves the last 24 historical data for specified coins and generates line chart images from it. These images are uploaded directly to the LBRY Blockchain and a Markdown File is generated.
 
 #### Technology Stack
-CoinStats is written in JavaScript and uses NodeJS for running. Also does CoinStats used Spee.ch to upload images directly to the LBRY Blockchain and [Cryptocompare](https://www.cryptocompare.com/) is used for historical coin data. Charts are generated with [ChartJS](http://www.chartjs.org/) Open Source Project. 
+CoinStats is written in JavaScript and uses NodeJS for running. Also does CoinStats use Spee.ch to upload images directly to the LBRY Blockchain and [Cryptocompare](https://www.cryptocompare.com/) is used for historical coin data. Charts are generated with the [ChartJS](http://www.chartjs.org/) Open Source Project. 
+
+##### Current Version: V.0.2
 
 ##### Roadmap
 - V.0.1:
@@ -25,9 +27,12 @@ CoinStats is written in JavaScript and uses NodeJS for running. Also does CoinSt
   - Custom messages for the coins
   - Better overall layout
 
-#### How to contribute?
-- Go the repository
-- Fork it
+#### How to use ?
 - Create a img/ folder
+- Run `node index.js`
+
+#### How to contribute?
+- Go to the repository
+- Fork it
 - Make changes
 - Create PR (Pull Request)
