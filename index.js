@@ -2,6 +2,7 @@ const ChartjsNode = require('chartjs-node');
 var request = require('request');
 var fs = require('fs');
 var steem = require('steem');
+var utils = require('./utils');
 
 var config = JSON.parse(fs.readFileSync("config.json"));
 steem.api.setOptions({ url: config.steem_api });
@@ -57,6 +58,7 @@ const borderMapping = {
 init();
 
 function init() {
+    const timestamp = Date.now();
     var coindata = {};
     var imageNames = {};
 
@@ -81,12 +83,11 @@ function init() {
 
                 const histoday = JSON.parse(result).Data;
                 const graphdata = generateGraphData(histoday, coin);
-                const timestamp = Date.now();
 
                 createChartImage(coin + timestamp, {
                     labels: getLabels(1440),
                     datasets: [graphdata]
-                }, 'line', {width: 1280, height: 800}, function() {
+                }, 'line', false, symbols[coin], {width: 1280, height: 800}, function() {
                     imageNames[coin] = coin + timestamp;
 
                     indexUploaded++;
@@ -95,7 +96,7 @@ function init() {
                         coins.forEach((coin) => {
                             dataset.push({
                                 label: coin,
-                                data: [coindata[coin].data.market_cap_usd],
+                                data: [coindata[coin].data.percent_change_7d],
                                 backgroundColor: [backgroundMapping[coin]],
                                 borderColor: [borderMapping[coin]],
                                 borderWidth: 1
@@ -103,7 +104,7 @@ function init() {
                         });
                         createChartImage('overall' + timestamp, {
                             datasets: dataset
-                        }, 'bar', {width: 1280, height: 800}, function() {
+                        }, 'bar', true, '7 Days Change', {width: 1280, height: 800}, function() {
                             uploadImageToBlockchain('overall' + timestamp, function(err, res) {
                                 if (err) {
                                     console.log(err);
@@ -176,6 +177,8 @@ function generateMarkdown(coinData, timestamp, imageNames) {
               };
 
               broadcastToSteemBlockchain(broadcastData, timestamp);
+
+              utils.clearImgFolder();
           });
         });
     });
@@ -190,6 +193,11 @@ function writeMarkdownFile(data) {
 }
 
 function broadcastToSteemBlockchain(data, timestamp) {
+    if (!config.should_post_to_steemit) {
+        console.log('Not uploading to Steemit - Abort');
+        return;
+    }
+
 
     const json_metadata = {
         "tags": [
@@ -305,18 +313,25 @@ function uploadImageToBlockchain(imageName, callback) {
     });
 }
 
-function createChartImage(imageName, chartDataSet, chartType, chartSize, callback) {
+function createChartImage(imageName, chartDataSet, chartType, showPercentage, title, chartSize, callback) {
     const chartNode = new ChartjsNode(chartSize.width, chartSize.height);
 
     return chartNode.drawChart({
         type: chartType,
         data: chartDataSet,
         options: {
+            title: {
+                display: true,
+                text: title
+            },
             scales: {
                 yAxes: [{
                     ticks: {
                         beginAtZero: false,
                         callback: function(value, index, values) {
+                            if (showPercentage) {
+                                return value + ' %';
+                            }
                             return value.toLocaleString("en-US",{style:"currency", currency:"USD"});;
                         }
                     }
@@ -333,17 +348,12 @@ function createChartImage(imageName, chartDataSet, chartType, chartSize, callbac
         return chartNode.getImageBuffer('image/png');
     })
     .then(buffer => {
-        Array.isArray(buffer) // => true
-        // as a stream
         return chartNode.getImageStream('image/png');
     })
     .then(streamResult => {
-        // using the length property you can do things like
-        // directly upload the image to s3 by using the
-        // stream and length properties
-        streamResult.stream // => Stream object
-        streamResult.length // => Integer length of stream
-        // write to a file
+        streamResult.stream
+        streamResult.length
+
         return chartNode.writeImageToFile('image/png', './img/'+ imageName +'.png');
     })
     .then(() => {
