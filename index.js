@@ -111,7 +111,7 @@ function init() {
                                     return;
                                 }
 
-                                const imgURL = JSON.parse(res).message.url;
+                                const imgURL = JSON.parse(res).data.url;
                                 coindata['overall'] = {
                                     image: imgURL + '.png'
                                 };
@@ -149,7 +149,7 @@ function uploadImages(coindata, imageNames, index, callback) {
             console.log(err);
             return;
         }
-        const imgURL = JSON.parse(res).message.url;
+        const imgURL = JSON.parse(res).data.url;
         coindata[coin].image = imgURL + '.png';
         uploadImages(coindata, imageNames, index + 1, callback);
     });
@@ -308,7 +308,7 @@ function getHistoricalData(symbol, callback) {
 }
 
 function uploadImageToBlockchain(imageName, callback) {
-    request.post({url: 'https://spee.ch/api/claim-publish', formData: {name: imageName, file: fs.createReadStream('./img/'+ imageName +'.png')}}, function (error, response, body) {
+    request.post({url: 'https://spee.ch/api/claim/publish', formData: {name: imageName, file: fs.createReadStream('./img/'+ imageName +'.png')}}, function (error, response, body) {
         callback(error, body);
     });
 }
