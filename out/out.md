@@ -1,79 +1,351 @@
 # CoinStats - Daily Cryptocurrency Statistic Service
 
-![overall_graph](https://spee.ch/08b13faa53e7f501fbd9cc0a11fb558092b1177a/overall1519849718905.png)
+![overall_graph](https://spee.ch/dc64c31e6a3742b38bf4917b6c8ea30daddde0ad/overall1520179698725.png)
 
-*I am happily presenting you the daily Cryptocurrency statistics for Wed Feb 28 2018*
+*I am happily presenting you the daily Cryptocurrency statistics for Sun Mar 04 2018*
 
 ## Bitcoin
 
-![coin_graph](https://spee.ch/c769b922b4b16bd589ff4ba6de49405e5700922a/bitcoin1519849718905.png)
+<div class=pull-right>
 
-Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
---- | --- | --- | --- | --- | --- | --- | ---
-Bitcoin | BTC | 1 | 10713.8 | 1.31 | -0.19 | 0.27 | [Click here](https://coinmarketcap.com/currencies/bitcoin)
+**Symbol:** BTC
+</div>
+<div class=pull-left>
 
----
-  ## Ripple
+**Name:** Bitcoin
+</div>
+<div>
 
-![coin_graph](https://spee.ch/2aad1a3006ba4c0b3678c337915dbe992c252d81/ripple1519849718905.png)
+**Rank:** 1
+</div>
 
-Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
---- | --- | --- | --- | --- | --- | --- | ---
-Ripple | XRP | 3 | 0.926025 | 0.4 | -2.78 | -9.15 | [Click here](https://coinmarketcap.com/currencies/ripple)
+![coin_graph](https://spee.ch/1de24a8d080cdb676f1fbacdaffd66fcb872331f/bitcoin1520179698725.png)
+
+<div class=pull-right>
+
+**More Info:** [Click here](https://coinmarketcap.com/currencies/bitcoin)
+</div>
+<div class=pull-left>
+
+**Price:** 11193.6
+</div>
+<center>
+
+**Market Cap:** 189168761760
+</center>
+<div class=pull-right>
+
+**Change (7d):** 16.66
+</div>
+<div class=pull-left>
+
+**Change (1h):** 0.16
+</div>
+<center>
+
+**Change (24h):** -2.49
+</center>
 
 ---
   ## Ethereum
 
-![coin_graph](https://spee.ch/0b628fbcfa33b7a04e4de138c219aee16b569cca/ethereum1519849718905.png)
+<div class=pull-right>
 
-Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
---- | --- | --- | --- | --- | --- | --- | ---
-Ethereum | ETH | 2 | 874.29 | 0.44 | -0.77 | 3.19 | [Click here](https://coinmarketcap.com/currencies/ethereum)
+**Symbol:** ETH
+</div>
+<div class=pull-left>
+
+**Name:** Ethereum
+</div>
+<div>
+
+**Rank:** 2
+</div>
+
+![coin_graph](https://spee.ch/3a8ba17134280ee303da7465cea29fce500fc599/ethereum1520179698725.png)
+
+<div class=pull-right>
+
+**More Info:** [Click here](https://coinmarketcap.com/currencies/ethereum)
+</div>
+<div class=pull-left>
+
+**Price:** 858.255
+</div>
+<center>
+
+**Market Cap:** 84092057299.0
+</center>
+<div class=pull-right>
+
+**Change (7d):** 2.63
+</div>
+<div class=pull-left>
+
+**Change (1h):** 0.6
+</div>
+<center>
+
+**Change (24h):** -0.51
+</center>
 
 ---
-  ## Cardano
+  ## Ripple
 
-![coin_graph](https://spee.ch/54039fec2effb523e26edfc58b7c029899d39b3b/cardano1519849718905.png)
+<div class=pull-right>
 
-Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
---- | --- | --- | --- | --- | --- | --- | ---
-Cardano | ADA | 7 | 0.319483 | 0.69 | -5.08 | -12.91 | [Click here](https://coinmarketcap.com/currencies/cardano)
+**Symbol:** XRP
+</div>
+<div class=pull-left>
+
+**Name:** Ripple
+</div>
+<div>
+
+**Rank:** 3
+</div>
+
+![coin_graph](https://spee.ch/bb8438e326873e2803975fa302dbe5297659867e/ripple1520179698725.png)
+
+<div class=pull-right>
+
+**More Info:** [Click here](https://coinmarketcap.com/currencies/ripple)
+</div>
+<div class=pull-left>
+
+**Price:** 0.924706
+</div>
+<center>
+
+**Market Cap:** 36148566918.0
+</center>
+<div class=pull-right>
+
+**Change (7d):** -1.09
+</div>
+<div class=pull-left>
+
+**Change (1h):** 0.8
+</div>
+<center>
+
+**Change (24h):** 1.65
+</center>
 
 ---
   ## Litecoin
 
-![coin_graph](https://spee.ch/0ec62015c899d3dd410bce1288298275f5748182/litecoin1519849718905.png)
+<div class=pull-right>
 
-Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
---- | --- | --- | --- | --- | --- | --- | ---
-Litecoin | LTC | 5 | 209.916 | 0.79 | -3.52 | -1.64 | [Click here](https://coinmarketcap.com/currencies/litecoin)
+**Symbol:** LTC
+</div>
+<div class=pull-left>
+
+**Name:** Litecoin
+</div>
+<div>
+
+**Rank:** 5
+</div>
+
+![coin_graph](https://spee.ch/455159c79f246f613a2b25dc5ca35380ed957e5c/litecoin1520179698725.png)
+
+<div class=pull-right>
+
+**More Info:** [Click here](https://coinmarketcap.com/currencies/litecoin)
+</div>
+<div class=pull-left>
+
+**Price:** 208.897
+</div>
+<center>
+
+**Market Cap:** 11589019542.0
+</center>
+<div class=pull-right>
+
+**Change (7d):** -2.07
+</div>
+<div class=pull-left>
+
+**Change (1h):** -0.02
+</div>
+<center>
+
+**Change (24h):** -2.03
+</center>
+
+---
+  ## Cardano
+
+<div class=pull-right>
+
+**Symbol:** ADA
+</div>
+<div class=pull-left>
+
+**Name:** Cardano
+</div>
+<div>
+
+**Rank:** 7
+</div>
+
+![coin_graph](https://spee.ch/7b79ab7583ca180ed9dae2f508022c5c570fbfc6/cardano1520179698725.png)
+
+<div class=pull-right>
+
+**More Info:** [Click here](https://coinmarketcap.com/currencies/cardano)
+</div>
+<div class=pull-left>
+
+**Price:** 0.292479
+</div>
+<center>
+
+**Market Cap:** 7583123664.0
+</center>
+<div class=pull-right>
+
+**Change (7d):** -10.84
+</div>
+<div class=pull-left>
+
+**Change (1h):** 0.5
+</div>
+<center>
+
+**Change (24h):** -1.66
+</center>
 
 ---
   ## NEO
 
-![coin_graph](https://spee.ch/0f510c7b38a2ed37b69883b5bf7deb8872924dd9/neo1519849718905.png)
+<div class=pull-right>
 
-Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
---- | --- | --- | --- | --- | --- | --- | ---
-NEO | NEO | 6 | 135.754 | 0.31 | -4.58 | 12.56 | [Click here](https://coinmarketcap.com/currencies/neo)
+**Symbol:** NEO
+</div>
+<div class=pull-left>
+
+**Name:** NEO
+</div>
+<div>
+
+**Rank:** 6
+</div>
+
+![coin_graph](https://spee.ch/389daccbe5ee31cb4a2dc13f131421e3d6934187/neo1520179698725.png)
+
+<div class=pull-right>
+
+**More Info:** [Click here](https://coinmarketcap.com/currencies/neo)
+</div>
+<div class=pull-left>
+
+**Price:** 124.988
+</div>
+<center>
+
+**Market Cap:** 8124220000.0
+</center>
+<div class=pull-right>
+
+**Change (7d):** 6.87
+</div>
+<div class=pull-left>
+
+**Change (1h):** 2.13
+</div>
+<center>
+
+**Change (24h):** 0.25
+</center>
 
 ---
   ## EOS
 
-![coin_graph](https://spee.ch/175ad5bb77d453fc44b4ed540c26bf2497dfb048/eos1519849718905.png)
+<div class=pull-right>
 
-Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
---- | --- | --- | --- | --- | --- | --- | ---
-EOS | EOS | 9 | 8.68903 | 0.87 | 0.01 | -0.05 | [Click here](https://coinmarketcap.com/currencies/eos)
+**Symbol:** EOS
+</div>
+<div class=pull-left>
+
+**Name:** EOS
+</div>
+<div>
+
+**Rank:** 10
+</div>
+
+![coin_graph](https://spee.ch/de62fef5dae2d4cb94adad51e74bcf159e3bc956/eos1520179698725.png)
+
+<div class=pull-right>
+
+**More Info:** [Click here](https://coinmarketcap.com/currencies/eos)
+</div>
+<div class=pull-left>
+
+**Price:** 7.85901
+</div>
+<center>
+
+**Market Cap:** 5545004604.0
+</center>
+<div class=pull-right>
+
+**Change (7d):** -0.06
+</div>
+<div class=pull-left>
+
+**Change (1h):** 0.03
+</div>
+<center>
+
+**Change (24h):** -2.83
+</center>
 
 ---
   ## Steem
 
-![coin_graph](https://spee.ch/4c57683e91a73a01a14b4472eb621766f15f99ea/steem1519849718905.png)
+<div class=pull-right>
 
-Name | Symbol | Rank | Price (USD) | Change (1h) | Change (24h) | Change (7d) | More Details
---- | --- | --- | --- | --- | --- | --- | ---
-Steem | STEEM | 28 | 3.33523 | 0.31 | -4.58 | -13.36 | [Click here](https://coinmarketcap.com/currencies/steem)
+**Symbol:** STEEM
+</div>
+<div class=pull-left>
+
+**Name:** Steem
+</div>
+<div>
+
+**Rank:** 27
+</div>
+
+![coin_graph](https://spee.ch/8fef0b8f90904dfbeb8e4de4d66713983bc0eec3/steem1520179698725.png)
+
+<div class=pull-right>
+
+**More Info:** [Click here](https://coinmarketcap.com/currencies/steem)
+</div>
+<div class=pull-left>
+
+**Price:** 3.48551
+</div>
+<center>
+
+**Market Cap:** 874837427.0
+</center>
+<div class=pull-right>
+
+**Change (7d):** 1.75
+</div>
+<div class=pull-left>
+
+**Change (1h):** 0.13
+</div>
+<center>
+
+**Change (24h):** -1.14
+</center>
 
 ---
   

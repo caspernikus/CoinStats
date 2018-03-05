@@ -179,6 +179,7 @@ function generateMarkdown(coinData, timestamp, imageNames) {
               broadcastToSteemBlockchain(broadcastData, timestamp);
 
               utils.clearImgFolder();
+              utils.writeToStateJSON();
           });
         });
     });
@@ -266,6 +267,7 @@ function generateCoinmarkdown(coindata, callback) {
       data = data.replace(/{change_1h}/g, coindata.data.percent_change_1h);
       data = data.replace(/{change_24h}/g, coindata.data.percent_change_24h);
       data = data.replace(/{change_7d}/g, coindata.data.percent_change_7d);
+      data = data.replace(/{market_cap}/g, coindata.data.market_cap_usd);
       data = data.replace(/{more}/g, '[Click here](https://coinmarketcap.com/currencies/'+ coindata.data.id +')');
 
       returnData = {

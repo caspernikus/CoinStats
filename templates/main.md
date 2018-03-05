@@ -1,8 +1,8 @@
 # {header}
 
-{overall_graph}
-
 *I am happily presenting you the daily Cryptocurrency statistics for {date}*
+
+{overall_graph}
 
 {coins}
 
