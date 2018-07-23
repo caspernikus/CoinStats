@@ -220,7 +220,7 @@ function broadcastToSteemBlockchain(data, timestamp) {
         'coin',
         config.account,
         timestamp + '-coinstats-daily-cryptocurrency-statistic-service',
-        'CoinStats - Daily Cryptocurrency Statistic Service',
+        'CoinStats - A Cryptocurrency Statistic Service',
         data.markdown,
         json_metadata
     );
