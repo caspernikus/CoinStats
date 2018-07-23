@@ -160,7 +160,6 @@ function generateMarkdown(coinData, timestamp, imageNames) {
         fs.readFile('templates/main.md', 'utf8', function (err, data) {
           if (err) throw err;
 
-          data = data.replace(/{header}/g, 'CoinStats - Daily Cryptocurrency Statistic Service');
           data = data.replace(/{overall_graph}/g, '![overall_graph]('+ coindata['overall'].image +')');
           data = data.replace(/{date}/g, new Date().toDateString());
 
