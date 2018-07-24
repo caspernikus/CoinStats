@@ -231,7 +231,7 @@ function getAllCoins(coindata, callback) {
 
     var returnData = {
         links: [],
-        images: [],
+        images: ['https://spee.ch/9/titleheader', 'https://spee.ch/e/coinsheaders'],
         markdown: ''
     };
 
