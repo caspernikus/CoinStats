@@ -149,6 +149,7 @@ function uploadImages(coindata, imageNames, index, callback) {
             console.log(err);
             return;
         }
+
         const imgURL = JSON.parse(res).data.url;
         coindata[coin].image = imgURL + '.png';
         uploadImages(coindata, imageNames, index + 1, callback);
