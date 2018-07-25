@@ -23,36 +23,36 @@ const coins = [
 ]
 
 const symbols = {
-    bitcoin: 'BTC',
-    ethereum: 'ETH',
-    steem: 'STEEM',
-    litecoin: 'LTC',
-    ripple: 'XRP',
-    cardano: 'ADA',
-    neo: 'NEO',
-    eos: 'EOS',
+    '1': 'BTC',
+    '1027': 'ETH',
+    '1230': 'STEEM',
+    '2': 'LTC',
+    '52': 'XRP',
+    '2010': 'ADA',
+    '1376': 'NEO',
+    '1765': 'EOS',
 }
 
 const backgroundMapping = {
-    bitcoin: 'rgba(255, 99, 132, 0.2)',
-    ethereum: 'rgba(54, 162, 235, 0.2)',
-    litecoin: 'rgba(123, 201, 237, 0.2)',
-    steem: 'rgba(255, 206, 86, 0.2)',
-    ripple: 'rgba(75, 192, 192, 0.2)',
-    cardano: 'rgba(153, 102, 255, 0.2)',
-    neo: 'rgba(255, 159, 64, 0.2)',
-    eos: 'rgba(34, 47, 62, 0.2)'
+    '1': 'rgba(255, 99, 132, 0.2)',
+    '1027': 'rgba(54, 162, 235, 0.2)',
+    '2': 'rgba(123, 201, 237, 0.2)',
+    '1230': 'rgba(255, 206, 86, 0.2)',
+    '52': 'rgba(75, 192, 192, 0.2)',
+    '2010': 'rgba(153, 102, 255, 0.2)',
+    '1376': 'rgba(255, 159, 64, 0.2)',
+    '1765': 'rgba(34, 47, 62, 0.2)'
 }
 
 const borderMapping = {
-    bitcoin: 'rgba(255, 99, 132, 1)',
-    ethereum: 'rgba(54, 162, 235, 1)',
-    litecoin: 'rgba(123, 201, 237, 1)',
-    steem: 'rgba(255, 206, 86, 1)',
-    ripple: 'rgba(75, 192, 192, 1)',
-    cardano: 'rgba(153, 102, 255, 1)',
-    neo: 'rgba(255, 159, 64, 1)',
-    eos: 'rgba(34, 47, 62, 1)'
+    '1': 'rgba(255, 99, 132, 1)',
+    '1027': 'rgba(54, 162, 235, 1)',
+    '2': 'rgba(123, 201, 237, 1)',
+    '1230': 'rgba(255, 206, 86, 1)',
+    '52': 'rgba(75, 192, 192, 1)',
+    '2010': 'rgba(153, 102, 255, 1)',
+    '1376': 'rgba(255, 159, 64, 1)',
+    '1765': 'rgba(34, 47, 62, 1)'
 }
 
 init();
