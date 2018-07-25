@@ -1,10 +1,61 @@
-# CoinStats - Daily Cryptocurrency Statistic Service
+![overall_graph](https://spee.ch/84bcd3f6fd78059bb504332074e39f9b7df934af/overall1532440108920.png)
 
-*I am happily presenting you the daily Cryptocurrency statistics for Wed Jun 06 2018*
+*I am happily presenting you the daily Cryptocurrency statistics for Tue Jul 24 2018*
 
-![overall_graph](https://spee.ch/437852f7dcb49aa948b555d069155fd81d576c83/overall1528268553626.png)
+![title](https://spee.ch/9/titleheader)
 
-## Ethereum
+## What is CoinStats?
+
+CoinStats is an automated script, running each and every day giving you the current prices for each featured coin, every day! It also provides you with the current top 10 coins and their changes over the past week!
+
+You can find the source code [here](https://github.com/caspernikus/CoinStats).
+
+![header](https://spee.ch/e/coinsheaders)
+
+## Litecoin
+
+<div class=pull-right>
+
+**Symbol:** LTC
+</div>
+<div class=pull-left>
+
+**Name:** Litecoin
+</div>
+<div>
+
+**Rank:** 7
+</div>
+
+![coin_graph](https://spee.ch/b5ad91e26e7d8d9497b56713517b6dab11ffd207/litecoin1532440108920.png)
+
+<div class=pull-right>
+
+**More Info:** [Click here](https://coinmarketcap.com/currencies/litecoin)
+</div>
+<div class=pull-left>
+
+**Price:** $88.6009
+</div>
+<center>
+
+**Market Cap:** $5098696682.0
+</center>
+<div class=pull-right>
+
+**Change (7d):** 4.69%
+</div>
+<div class=pull-left>
+
+**Change (1h):** 1.59%
+</div>
+<center>
+
+**Change (24h):** 4.44%
+</center>
+
+---
+  ## Ethereum
 
 <div class=pull-right>
 
@@ -19,7 +70,7 @@
 **Rank:** 2
 </div>
 
-![coin_graph](https://spee.ch/2be61fedd59d00cb3c3e3e600f7595d12c2e4a22/ethereum1528268553626.png)
+![coin_graph](https://spee.ch/02c4ef5a7207c6667275bb49528c9d0cfef2b743/ethereum1532440108920.png)
 
 <div class=pull-right>
 
@@ -27,66 +78,23 @@
 </div>
 <div class=pull-left>
 
-**Price:** $608.604
+**Price:** $478.317
 </div>
 <center>
 
-**Market Cap:** $60798889743.0
+**Market Cap:** $48257392234.0
 </center>
 <div class=pull-right>
 
-**Change (7d):** 6.55%
+**Change (7d):** 0.08%
 </div>
 <div class=pull-left>
 
-**Change (1h):** 0.46%
+**Change (1h):** 1.39%
 </div>
 <center>
 
-**Change (24h):** 3.51%
-</center>
-
----
-  ## Ripple
-
-<div class=pull-right>
-
-**Symbol:** XRP
-</div>
-<div class=pull-left>
-
-**Name:** Ripple
-</div>
-<div>
-
-**Rank:** 3
-</div>
-
-![coin_graph](https://spee.ch/22dd97d1972657e202cbdf59c086e0995f05a155/ripple1528268553626.png)
-
-<div class=pull-right>
-
-**More Info:** [Click here](https://coinmarketcap.com/currencies/ripple)
-</div>
-<div class=pull-left>
-
-**Price:** $0.674703
-</div>
-<center>
-
-**Market Cap:** $26476375214.0
-</center>
-<div class=pull-right>
-
-**Change (7d):** 9.23%
-</div>
-<div class=pull-left>
-
-**Change (1h):** 0.17%
-</div>
-<center>
-
-**Change (24h):** 2.92%
+**Change (24h):** 3.43%
 </center>
 
 ---
@@ -105,7 +113,7 @@
 **Rank:** 1
 </div>
 
-![coin_graph](https://spee.ch/d3b1da394b7b42bb93aad983d2956771c1579e53/bitcoin1528268553626.png)
+![coin_graph](https://spee.ch/1a3b918db917427c036e82a4f75fd5216a1cbc60/bitcoin1532440108920.png)
 
 <div class=pull-right>
 
@@ -113,23 +121,23 @@
 </div>
 <div class=pull-left>
 
-**Price:** $7635.25
+**Price:** $8212.74
 </div>
 <center>
 
-**Market Cap:** $130395753906
+**Market Cap:** $140996213554
 </center>
 <div class=pull-right>
 
-**Change (7d):** 1.57%
+**Change (7d):** 20.24%
 </div>
 <div class=pull-left>
 
-**Change (1h):** 0.23%
+**Change (1h):** 0.17%
 </div>
 <center>
 
-**Change (24h):** 2.65%
+**Change (24h):** 6.77%
 </center>
 
 ---
@@ -145,10 +153,10 @@
 </div>
 <div>
 
-**Rank:** 7
+**Rank:** 8
 </div>
 
-![coin_graph](https://spee.ch/f3c5f33ea795ad974129be9cc1168faa5f9248e5/cardano1528268553626.png)
+![coin_graph](https://spee.ch/e1aeb4ce54a5e4fb1e53023a1291fb7cb15b46d9/cardano1532440108920.png)
 
 <div class=pull-right>
 
@@ -156,66 +164,66 @@
 </div>
 <div class=pull-left>
 
-**Price:** $0.217251
+**Price:** $0.176668
 </div>
 <center>
 
-**Market Cap:** $5632682001.0
+**Market Cap:** $4580483698.0
 </center>
 <div class=pull-right>
 
-**Change (7d):** 3.28%
+**Change (7d):** 14.06%
 </div>
 <div class=pull-left>
 
-**Change (1h):** 0.37%
+**Change (1h):** 3.26%
 </div>
 <center>
 
-**Change (24h):** 4.29%
+**Change (24h):** 3.08%
 </center>
 
 ---
-  ## Litecoin
+  ## XRP
 
 <div class=pull-right>
 
-**Symbol:** LTC
+**Symbol:** XRP
 </div>
 <div class=pull-left>
 
-**Name:** Litecoin
+**Name:** XRP
 </div>
 <div>
 
-**Rank:** 6
+**Rank:** 3
 </div>
 
-![coin_graph](https://spee.ch/d78ba7167eecb7dd235c4ccb69599357a290e65a/litecoin1528268553626.png)
+![coin_graph](https://spee.ch/483a689df418c2ca616bebf4eedfc95fd350139e/ripple1532440108920.png)
 
 <div class=pull-right>
 
-**More Info:** [Click here](https://coinmarketcap.com/currencies/litecoin)
+**More Info:** [Click here](https://coinmarketcap.com/currencies/ripple)
 </div>
 <div class=pull-left>
 
-**Price:** $121.337
+**Price:** $0.463834
 </div>
 <center>
 
-**Market Cap:** $6898748375.0
+**Market Cap:** $18235950729.0
 </center>
 <div class=pull-right>
 
-**Change (7d):** 0.35%
+**Change (7d):** -3.33%
 </div>
 <div class=pull-left>
 
-**Change (1h):** 0.4%
+**Change (1h):** 2.3%
 </div>
 <center>
 
-**Change (24h):** 3.32%
+**Change (24h):** 2.58%
 </center>
 
 ---
@@ -231,10 +239,10 @@
 </div>
 <div>
 
-**Rank:** 11
+**Rank:** 13
 </div>
 
-![coin_graph](https://spee.ch/7953799a64b96aad500c42355525b28b1f91298a/neo1528268553626.png)
+![coin_graph](https://spee.ch/bf04566e0c37c03001cda4de7d69d12676c4265d/neo1532440108920.png)
 
 <div class=pull-right>
 
@@ -242,23 +250,23 @@
 </div>
 <div class=pull-left>
 
-**Price:** $54.1532
+**Price:** $34.5154
 </div>
 <center>
 
-**Market Cap:** $3519958000.0
+**Market Cap:** $2243501000.0
 </center>
 <div class=pull-right>
 
-**Change (7d):** 2.89%
+**Change (7d):** -6.63%
 </div>
 <div class=pull-left>
 
-**Change (1h):** 0.37%
+**Change (1h):** 3.45%
 </div>
 <center>
 
-**Change (24h):** 3.21%
+**Change (24h):** 3.4%
 </center>
 
 ---
@@ -277,7 +285,7 @@
 **Rank:** 5
 </div>
 
-![coin_graph](https://spee.ch/7e3a26868ca92ebc542d4c462aae7850e5a24004/eos1528268553626.png)
+![coin_graph](https://spee.ch/827a319ce482bb0438591dd297d4dc7a277b7999/eos1532440108920.png)
 
 <div class=pull-right>
 
@@ -285,23 +293,23 @@
 </div>
 <div class=pull-left>
 
-**Price:** $14.0347
+**Price:** $8.49496
 </div>
 <center>
 
-**Market Cap:** $12577189278.0
+**Market Cap:** $7612754090.0
 </center>
 <div class=pull-right>
 
-**Change (7d):** 13.44%
+**Change (7d):** 4.9%
 </div>
 <div class=pull-left>
 
-**Change (1h):** 0.04%
+**Change (1h):** 4.42%
 </div>
 <center>
 
-**Change (24h):** 5.96%
+**Change (24h):** 4.96%
 </center>
 
 ---
@@ -317,10 +325,10 @@
 </div>
 <div>
 
-**Rank:** 32
+**Rank:** 38
 </div>
 
-![coin_graph](https://spee.ch/9d6b022d14fcbd1270656def9c0fe189937acb7c/steem1528268553626.png)
+![coin_graph](https://spee.ch/ebbee3c66e8d8bddfa1a72f86f8f58748537f724/steem1532440108920.png)
 
 <div class=pull-right>
 
@@ -328,23 +336,23 @@
 </div>
 <div class=pull-left>
 
-**Price:** $2.33509
+**Price:** $1.38431
 </div>
 <center>
 
-**Market Cap:** $604008945.0
+**Market Cap:** $368651121.0
 </center>
 <div class=pull-right>
 
-**Change (7d):** -1.94%
+**Change (7d):** -3.96%
 </div>
 <div class=pull-left>
 
-**Change (1h):** 0.73%
+**Change (1h):** 1.83%
 </div>
 <center>
 
-**Change (24h):** 3.27%
+**Change (24h):** -0.52%
 </center>
 
 ---

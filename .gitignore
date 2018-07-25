@@ -60,4 +60,4 @@ typings/
 wallpaper.png
 *.afphoto
 img/*
-# config.json
+config.json

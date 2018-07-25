@@ -231,7 +231,7 @@ function getAllCoins(coindata, callback) {
 
     var returnData = {
         links: [],
-        images: ['https://spee.ch/9/titleheader', 'https://spee.ch/e/coinsheaders'],
+        images: ['https://spee.ch/9/titleheader.png', 'https://spee.ch/e/coinsheaders.png'],
         markdown: ''
     };
 
@@ -297,7 +297,7 @@ function generateGraphData(histoData, coin) {
 }
 
 function getCoinData(id, callback) {
-    request('https://api.coinmarketcap.com/v1/ticker/' + id, function (error, response, body) {
+    request('https://api.coinmarketcap.com/v2/ticker/' + id, function (error, response, body) {
         callback(error, body);
     });
 }
@@ -363,3 +363,6 @@ function createChartImage(imageName, chartDataSet, chartType, showPercentage, ti
         callback();
     });
 }
+
+
+module.exports = { init };
