@@ -12,14 +12,14 @@ if (global.CanvasGradient === undefined) {
 }
 
 const coins = [
-    'bitcoin',
-    'ethereum',
-    'ripple',
-    'litecoin',
-    'cardano',
-    'neo',
-    'eos',
-    'steem',
+    '1',
+    '1027',
+    '52',
+    '2',
+    '2010',
+    '1376',
+    '1765',
+    '1230',
 ]
 
 const symbols = {
@@ -71,7 +71,7 @@ function init() {
             }
 
             coindata[coin] = {
-                data: JSON.parse(res)[0],
+                data: JSON.parse(res).data,
                 image: null
             };
 
@@ -96,7 +96,7 @@ function init() {
                         coins.forEach((coin) => {
                             dataset.push({
                                 label: coin,
-                                data: [coindata[coin].data.percent_change_7d],
+                                data: [coindata[coin].data.quotes.USD.percent_change_7d],
                                 backgroundColor: [backgroundMapping[coin]],
                                 borderColor: [borderMapping[coin]],
                                 borderWidth: 1
@@ -262,11 +262,11 @@ function generateCoinmarkdown(coindata, callback) {
       data = data.replace(/{name}/g, coindata.data.name);
       data = data.replace(/{symbol}/g, coindata.data.symbol);
       data = data.replace(/{rank}/g, coindata.data.rank);
-      data = data.replace(/{price}/g, coindata.data.price_usd);
-      data = data.replace(/{change_1h}/g, coindata.data.percent_change_1h);
-      data = data.replace(/{change_24h}/g, coindata.data.percent_change_24h);
-      data = data.replace(/{change_7d}/g, coindata.data.percent_change_7d);
-      data = data.replace(/{market_cap}/g, coindata.data.market_cap_usd);
+      data = data.replace(/{price}/g, coindata.data.quotes.USD.price);
+      data = data.replace(/{change_1h}/g, coindata.data.quotes.USD.percent_change_1h);
+      data = data.replace(/{change_24h}/g, coindata.data.quotes.USD.percent_change_24h);
+      data = data.replace(/{change_7d}/g, coindata.data.quotes.USD.percent_change_7d);
+      data = data.replace(/{market_cap}/g, coindata.data.quotes.USD.market_cap);
       data = data.replace(/{more}/g, '[Click here](https://coinmarketcap.com/currencies/'+ coindata.data.id +')');
 
       returnData = {
